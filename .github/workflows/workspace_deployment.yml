@@ -3,6 +3,7 @@ name: workspace deployment
 on:
     push:
         branches: [ worksapce_publish ]
+    workflow_dispatch:
 jobs:
     release:
         # You also can use the self-hosted runners.
@@ -10,17 +11,18 @@ jobs:
         steps:
         # Checks out your repository under $GITHUB_WORKSPACE, so your job can access it.
         - uses: actions/checkout@v2
-        - uses: azure/synapse-workspace-deployment@release-1.0
+        - name: synapse-workspace-deployment
+          uses: azure/synapse-workspace-deployment@release-1.0
           with:
             TargetWorkspaceName: 'uat-test-arm'
             TemplateFile: './dev-test-arm/TemplateForWorkspace.json'
             ParametersFile: './dev-test-arm/TemplateParametersForWorkspace.json'
-            OverrideArmParameters: './path of the parameters.yaml'
+            # OverrideArmParameters: './path of the parameters.yaml'
             environment: 'Azure Public'
             resourceGroup: 'devopssynapsepractices'
             clientId: ${{secrets.CLIENTID}}
             clientSecret:  ${{secrets.CLIENTSECRET}}
             subscriptionId: ${{secrets.SUBSCRIPTIONID}}
             tenantId: ${{secrets.TENANTID}}
-            DeleteArtifactsNotInTemplate: 'true'
-            managedIdentity: 'False'
+            DeleteArtifactsNotInTemplate: 'false'
+            # managedIdentity: 'False'
