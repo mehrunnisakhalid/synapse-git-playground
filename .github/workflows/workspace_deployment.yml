@@ -2,7 +2,7 @@ name: workspace deployment
 
 on:
     push:
-        branches: [ worksapce_publish ]
+        branches: [worksapce_publish]
     workflow_dispatch:
 jobs:
     release:
