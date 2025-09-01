@@ -17,7 +17,7 @@ jobs:
             ParametersFile: './dev-test-arm/TemplateParametersForWorkspace.json'
             OverrideArmParameters: './path of the parameters.yaml'
             environment: 'Azure Public'
-            resourceGroup: 'target workspace resource group'
+            resourceGroup: 'devopssynapsepractices'
             clientId: ${{secrets.CLIENTID}}
             clientSecret:  ${{secrets.CLIENTSECRET}}
             subscriptionId: ${{secrets.SUBSCRIPTIONID}}
