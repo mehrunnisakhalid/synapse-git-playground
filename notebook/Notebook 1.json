@@ -18,12 +18,16 @@
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "1385c4e2-2236-4ebc-80f9-1ae9b91e68ad"
+				"spark.autotune.trackingId": "48510605-1c4f-4086-9eb3-d6f1955367fb"
 			}
 		},
 		"metadata": {
 			"saveOutput": true,
 			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "python"
+			},
 			"language_info": {
 				"name": "python"
 			},
@@ -34,14 +38,13 @@
 				"endpoint": "https://dev-test-arm.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/sparkpooltest",
 				"auth": {
 					"type": "AAD",
-					"authResource": "https://dev.azuresynapse.net",
-					"authHeader": null
+					"authResource": "https://dev.azuresynapse.net"
 				},
 				"sparkVersion": "3.4",
 				"nodeCount": 3,
 				"cores": 8,
 				"memory": 56,
-				"extraHeader": null
+				"automaticScaleJobs": false
 			},
 			"sessionKeepAliveTimeout": 30
 		},
@@ -49,14 +52,16 @@
 			{
 				"cell_type": "code",
 				"source": [
-					"print(\"hello world\")"
-				]
+					"print(\"hellooooo world\")"
+				],
+				"execution_count": null
 			},
 			{
 				"cell_type": "code",
 				"source": [
 					""
-				]
+				],
+				"execution_count": null
 			}
 		]
 	}
