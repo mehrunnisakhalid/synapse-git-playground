@@ -124,7 +124,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "bc5f3011-a2bf-4ee7-85ba-76b983425723"
+						"spark.autotune.trackingId": "ab06ac01-ae03-48d8-8d3f-0cf2da73d06f"
 					}
 				},
 				"metadata": {
@@ -201,6 +201,71 @@
 			},
 			"dependsOn": [],
 			"location": "centralindia"
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/Notebook 2')]",
+			"type": "Microsoft.Synapse/workspaces/notebooks",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"nbformat": 4,
+				"nbformat_minor": 2,
+				"bigDataPool": {
+					"referenceName": "sparkpooltest",
+					"type": "BigDataPoolReference"
+				},
+				"sessionProperties": {
+					"driverMemory": "56g",
+					"driverCores": 8,
+					"executorMemory": "56g",
+					"executorCores": 8,
+					"numExecutors": 2,
+					"conf": {
+						"spark.dynamicAllocation.enabled": "false",
+						"spark.dynamicAllocation.minExecutors": "2",
+						"spark.dynamicAllocation.maxExecutors": "2",
+						"spark.autotune.trackingId": "29bbd3eb-4bf6-4881-81fe-6b94be1c3b1a"
+					}
+				},
+				"metadata": {
+					"saveOutput": true,
+					"enableDebugMode": false,
+					"kernelspec": {
+						"name": "synapse_pyspark",
+						"display_name": "python"
+					},
+					"language_info": {
+						"name": "python"
+					},
+					"a365ComputeOptions": {
+						"id": "/subscriptions/e5ffa460-6da3-4a84-9f3a-b8d49b459ecc/resourceGroups/devopssynapsepractices/providers/Microsoft.Synapse/workspaces/dev-test-arm/bigDataPools/sparkpooltest",
+						"name": "sparkpooltest",
+						"type": "Spark",
+						"endpoint": "https://dev-test-arm.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/sparkpooltest",
+						"auth": {
+							"type": "AAD",
+							"authResource": "https://dev.azuresynapse.net"
+						},
+						"sparkVersion": "3.4",
+						"nodeCount": 3,
+						"cores": 8,
+						"memory": 56,
+						"automaticScaleJobs": false
+					},
+					"sessionKeepAliveTimeout": 30
+				},
+				"cells": [
+					{
+						"cell_type": "code",
+						"metadata": {},
+						"source": [
+							"peint(\"bye\")"
+						],
+						"outputs": [],
+						"execution_count": null
+					}
+				]
+			},
+			"dependsOn": []
 		}
 	]
 }
