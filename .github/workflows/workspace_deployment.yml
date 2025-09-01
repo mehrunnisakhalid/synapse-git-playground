@@ -15,8 +15,8 @@ jobs:
           uses: azure/synapse-workspace-deployment@release-1.0
           with:
             TargetWorkspaceName: 'uat-test-arm'
-            TemplateFile: './dev-test-arm/TemplateForWorkspace.json'
-            ParametersFile: './dev-test-arm/TemplateParametersForWorkspace.json'
+            TemplateFile: './workspace_publish/dev-test-arm/TemplateForWorkspace.json'
+            ParametersFile: './workspace_publish/dev-test-arm/TemplateParametersForWorkspace.json'
             # OverrideArmParameters: './path of the parameters.yaml'
             environment: 'Azure Public'
             resourceGroup: 'devopssynapsepractices'
