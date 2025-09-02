@@ -4,11 +4,6 @@ on:
     push:
         branches: [worksapce_publish]
     workflow_dispatch:
-        inputs:
-            referenceName:
-                description: "Big Data Pool Reference Name"
-                default: "sparkpooltest"
-                type: "string"
 jobs:
     release:
         # You also can use the self-hosted runners.
