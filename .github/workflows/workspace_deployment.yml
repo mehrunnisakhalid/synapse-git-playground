@@ -18,9 +18,10 @@ jobs:
             TemplateFile: './dev-test-arm/TemplateForWorkspace.json'
             ParametersFile: './dev-test-arm/TemplateParametersForWorkspace.json'
             OverrideArmParameters: |
-                                  {
-                                    "Notebook 3_properties_bigDataPool_referenceName": "sparkpooluat"
-                                  }
+                          {
+                            "Notebook_Notebook_x0020_3_properties_bigDataPool_referenceName": "sparkpooluat"
+                          }
+
             environment: 'Azure Public'
             resourceGroup: 'devopssynapsepractices'
             clientId: ${{secrets.CLIENTID}}
