@@ -17,7 +17,7 @@ jobs:
             TargetWorkspaceName: 'uat-test-arm'
             TemplateFile: './dev-test-arm/TemplateForWorkspace.json'
             ParametersFile: './dev-test-arm/TemplateParametersForWorkspace.json'
-            OverrideArmParameters: './parameters/uat/overrides.yaml'   # <-- path, not JSON
+            OverrideArmParameters: './parameters/uat/overrides.yml'   # <-- path, not JSON
             environment: 'Azure Public'
             resourceGroup: 'devopssynapsepractices'
             clientId: ${{secrets.CLIENTID}}
