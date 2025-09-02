@@ -23,6 +23,9 @@
 		},
 		"Notebook 2_properties_bigDataPool_referenceName": {
 			"value": "sparkpooltest"
+		},
+		"Notebook 3_properties_bigDataPool_referenceName": {
+			"value": "sparkpooltest"
 		}
 	}
 }

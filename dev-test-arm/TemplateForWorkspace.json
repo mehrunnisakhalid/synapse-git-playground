@@ -30,6 +30,10 @@
 		"Notebook 2_properties_bigDataPool_referenceName": {
 			"type": "string",
 			"defaultValue": "sparkpooltest"
+		},
+		"Notebook 3_properties_bigDataPool_referenceName": {
+			"type": "string",
+			"defaultValue": "sparkpooltest"
 		}
 	},
 	"variables": {
@@ -194,7 +198,7 @@
 						"spark.dynamicAllocation.enabled": "false",
 						"spark.dynamicAllocation.minExecutors": "2",
 						"spark.dynamicAllocation.maxExecutors": "2",
-						"spark.autotune.trackingId": "fb86f27b-562a-4465-b753-2127c9081170"
+						"spark.autotune.trackingId": "e379bfea-776f-40c3-b20d-825439530930"
 					}
 				},
 				"metadata": {
@@ -262,6 +266,71 @@
 			},
 			"dependsOn": [],
 			"location": "centralindia"
+		},
+		{
+			"name": "[concat(parameters('workspaceName'), '/Notebook 3')]",
+			"type": "Microsoft.Synapse/workspaces/notebooks",
+			"apiVersion": "2019-06-01-preview",
+			"properties": {
+				"nbformat": 4,
+				"nbformat_minor": 2,
+				"bigDataPool": {
+					"referenceName": "[parameters('Notebook 3_properties_bigDataPool_referenceName')]",
+					"type": "BigDataPoolReference"
+				},
+				"sessionProperties": {
+					"driverMemory": "56g",
+					"driverCores": 8,
+					"executorMemory": "56g",
+					"executorCores": 8,
+					"numExecutors": 2,
+					"conf": {
+						"spark.dynamicAllocation.enabled": "false",
+						"spark.dynamicAllocation.minExecutors": "2",
+						"spark.dynamicAllocation.maxExecutors": "2",
+						"spark.autotune.trackingId": "76f043c1-9e7d-4cb2-8b1a-40bc8e2cabc3"
+					}
+				},
+				"metadata": {
+					"saveOutput": true,
+					"enableDebugMode": false,
+					"kernelspec": {
+						"name": "synapse_pyspark",
+						"display_name": "python"
+					},
+					"language_info": {
+						"name": "python"
+					},
+					"a365ComputeOptions": {
+						"id": "/subscriptions/e5ffa460-6da3-4a84-9f3a-b8d49b459ecc/resourceGroups/devopssynapsepractices/providers/Microsoft.Synapse/workspaces/dev-test-arm/bigDataPools/sparkpooltest",
+						"name": "sparkpooltest",
+						"type": "Spark",
+						"endpoint": "https://dev-test-arm.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/sparkpooltest",
+						"auth": {
+							"type": "AAD",
+							"authResource": "https://dev.azuresynapse.net"
+						},
+						"sparkVersion": "3.4",
+						"nodeCount": 3,
+						"cores": 8,
+						"memory": 56,
+						"automaticScaleJobs": false
+					},
+					"sessionKeepAliveTimeout": 30
+				},
+				"cells": [
+					{
+						"cell_type": "code",
+						"metadata": {},
+						"source": [
+							"print(\"hel\")"
+						],
+						"outputs": [],
+						"execution_count": null
+					}
+				]
+			},
+			"dependsOn": []
 		}
 	]
 }
