@@ -24,7 +24,7 @@ jobs:
             ParametersFile: './dev-test-arm/TemplateParametersForWorkspace.json'
             OverrideArmParameters: |
                                   {
-                                    "notebooks_Notebook 3_properties_bigDataPool_referenceName": "sparkpooluat"
+                                    "Notebook 3_properties_bigDataPool_referenceName": "sparkpooluat"
                                   }
             environment: 'Azure Public'
             resourceGroup: 'devopssynapsepractices'
