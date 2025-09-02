@@ -17,11 +17,7 @@ jobs:
             TargetWorkspaceName: 'uat-test-arm'
             TemplateFile: './dev-test-arm/TemplateForWorkspace.json'
             ParametersFile: './dev-test-arm/TemplateParametersForWorkspace.json'
-            OverrideArmParameters: |
-                          {
-                            "Notebook_Notebook_x0020_3_properties_bigDataPool_referenceName": "sparkpooluat"
-                          }
-
+            OverrideArmParameters: './parameters/uat/overrides.yaml'   # <-- path, not JSON
             environment: 'Azure Public'
             resourceGroup: 'devopssynapsepractices'
             clientId: ${{secrets.CLIENTID}}
