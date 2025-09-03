@@ -91,19 +91,19 @@
         }
     },
     "Microsoft.Synapse/workspaces/datasets": {
-        "*": {
-            "properties": {
-                "typeProperties": {
-                    "folderPath": "=",
-                    "fileName": "="
-                }
-			"parameters": {
-				  "containername": { "type": "=", "defaultValue": "=" },
-				  "foldername":    { "type": "=", "defaultValue": "=" }
-				}
-            }
-        }
-    },
+	    "*": {
+	      "properties": {
+	        "typeProperties": {
+	          "folderPath": "=",
+	          "fileName": "="
+	        },
+	        "parameters": {
+	          "containername": { "type": "=", "defaultValue": "=" },
+	          "foldername":    { "type": "=", "defaultValue": "=" }
+	        }
+	      }
+	    }
+	  },
     "Microsoft.Synapse/workspaces/credentials" : {
         "properties": {
             "typeProperties": {
