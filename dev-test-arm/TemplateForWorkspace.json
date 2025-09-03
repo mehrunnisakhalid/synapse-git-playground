@@ -12,11 +12,17 @@
 			"metadata": "Secure string for 'connectionString' of 'dev-test-arm-WorkspaceDefaultSqlServer'",
 			"defaultValue": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:dev-test-arm.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
 		},
-		"DelimitedText1_properties_parameters_containername": {
-			"type": "object",
-			"defaultValue": {
-				"type": "string"
-			}
+		"DelimitedText1_properties_typeProperties_location_fileName": {
+			"type": "string",
+			"defaultValue": "Book1.csv"
+		},
+		"DelimitedText1_properties_typeProperties_location_folderPath": {
+			"type": "string",
+			"defaultValue": "@dataset().foldername"
+		},
+		"DelimitedText1_properties_typeProperties_location_fileSystem": {
+			"type": "string",
+			"defaultValue": "@dataset().containername"
 		},
 		"dev-test-arm-WorkspaceDefaultStorage_properties_typeProperties_url": {
 			"type": "string",
@@ -149,7 +155,9 @@
 					}
 				},
 				"parameters": {
-					"containername": "[parameters('DelimitedText1_properties_parameters_containername')]",
+					"containername": {
+						"type": "string"
+					},
 					"foldername": {
 						"type": "string"
 					}
@@ -159,13 +167,13 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "Book1.csv",
+						"fileName": "[parameters('DelimitedText1_properties_typeProperties_location_fileName')]",
 						"folderPath": {
-							"value": "@dataset().foldername",
+							"value": "[parameters('DelimitedText1_properties_typeProperties_location_folderPath')]",
 							"type": "Expression"
 						},
 						"fileSystem": {
-							"value": "@dataset().containername",
+							"value": "[parameters('DelimitedText1_properties_typeProperties_location_fileSystem')]",
 							"type": "Expression"
 						}
 					},
