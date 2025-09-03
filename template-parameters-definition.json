@@ -98,8 +98,7 @@
 	          "fileName": "="
 	        },
 	        "parameters": {
-	          "containername": "=",
-	          "foldername":    { "type": "=", "defaultValue": "=" }
+	          "containername": "="
 	        }
 	      }
 	    }
