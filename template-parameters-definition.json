@@ -97,6 +97,10 @@
                     "folderPath": "=",
                     "fileName": "="
                 }
+			"parameters": {
+		          "containername": { "type": "=", "defaultValue": "=" },
+		          "foldername":    { "type": "=", "defaultValue": "=" }
+		        }
             }
         }
     },
