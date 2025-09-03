@@ -67,6 +67,11 @@
                 "typeProperties": {
                     "dataLakeStoreUri": "="
                 }
+            "parameters": {
+					"accounturl": {
+						"type": "string"
+					}
+				}
             }
         },
         "AzureKeyVault": {
