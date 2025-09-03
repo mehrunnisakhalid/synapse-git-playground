@@ -12,6 +12,22 @@
 			"metadata": "Secure string for 'connectionString' of 'dev-test-arm-WorkspaceDefaultSqlServer'",
 			"defaultValue": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:dev-test-arm.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
 		},
+		"DelimitedText1_properties_parameters_containername_type": {
+			"type": "string",
+			"defaultValue": "string"
+		},
+		"DelimitedText1_properties_parameters_containername_defaultValue": {
+			"type": "string",
+			"defaultValue": "gittestcont"
+		},
+		"DelimitedText1_properties_parameters_foldername_type": {
+			"type": "string",
+			"defaultValue": "string"
+		},
+		"DelimitedText1_properties_parameters_foldername_defaultValue": {
+			"type": "string",
+			"defaultValue": "test"
+		},
 		"dev-test-arm-WorkspaceDefaultStorage_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://gitteststg.dfs.core.windows.net"
@@ -144,12 +160,12 @@
 				},
 				"parameters": {
 					"containername": {
-						"type": "string",
-						"defaultValue": "gittestcont"
+						"type": "[parameters('DelimitedText1_properties_parameters_containername_type')]",
+						"defaultValue": "[parameters('DelimitedText1_properties_parameters_containername_defaultValue')]"
 					},
 					"foldername": {
-						"type": "string",
-						"defaultValue": "test"
+						"type": "[parameters('DelimitedText1_properties_parameters_foldername_type')]",
+						"defaultValue": "[parameters('DelimitedText1_properties_parameters_foldername_defaultValue')]"
 					}
 				},
 				"annotations": [],

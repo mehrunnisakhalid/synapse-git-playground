@@ -8,6 +8,18 @@
 		"dev-test-arm-WorkspaceDefaultSqlServer_connectionString": {
 			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:dev-test-arm.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
 		},
+		"DelimitedText1_properties_parameters_containername_type": {
+			"value": "string"
+		},
+		"DelimitedText1_properties_parameters_containername_defaultValue": {
+			"value": "gittestcont"
+		},
+		"DelimitedText1_properties_parameters_foldername_type": {
+			"value": "string"
+		},
+		"DelimitedText1_properties_parameters_foldername_defaultValue": {
+			"value": "test"
+		},
 		"dev-test-arm-WorkspaceDefaultStorage_properties_typeProperties_url": {
 			"value": "https://gitteststg.dfs.core.windows.net"
 		},
