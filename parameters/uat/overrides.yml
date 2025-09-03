@@ -2,6 +2,4 @@
 "Notebook 2_properties_bigDataPool_referenceName": sparkpooluat
 "Notebook 3_properties_bigDataPool_referenceName": sparkpooluat
 "stggen2_ls_param_properties_typeProperties_url": https://gitteststguat.dfs.core.windows.net
-"DelimitedText1_properties_parameters_containername":
-  "type": string
-  "defaultValue": gittestcontuat
+"Pipeline_Copy_properties_typeProperties_inputs_0_parameters_containername": gittestcontuat
