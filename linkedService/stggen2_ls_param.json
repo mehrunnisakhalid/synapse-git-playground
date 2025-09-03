@@ -3,8 +3,7 @@
 	"properties": {
 		"parameters": {
 			"accounturl": {
-				"type": "string",
-				"defaultValue": "https://gitteststg.dfs.core.windows.net"
+				"type": "string"
 			}
 		},
 		"annotations": [],
