@@ -8,6 +8,12 @@
 		"dev-test-arm-WorkspaceDefaultSqlServer_connectionString": {
 			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=tcp:dev-test-arm.sql.azuresynapse.net,1433;Initial Catalog=@{linkedService().DBName}"
 		},
+		"dev-test-arm-WorkspaceDefaultStorage_properties_typeProperties_url": {
+			"value": "https://gitteststg.dfs.core.windows.net"
+		},
+		"stggen2_ls_param_properties_typeProperties_url": {
+			"value": "@{linkedService().accounturl}"
+		},
 		"AutoResolveIntegrationRuntime_properties_typeProperties_computeProperties": {
 			"value": {
 				"location": "AutoResolve",
