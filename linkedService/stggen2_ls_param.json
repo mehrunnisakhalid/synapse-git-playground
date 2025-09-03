@@ -1,0 +1,20 @@
+{
+	"name": "stggen2_ls_param",
+	"properties": {
+		"parameters": {
+			"accounturl": {
+				"type": "string",
+				"defaultValue": "https://gitteststg.dfs.core.windows.net"
+			}
+		},
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "@{linkedService().accounturl}"
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
