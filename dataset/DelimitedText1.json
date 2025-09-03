@@ -10,12 +10,10 @@
 		},
 		"parameters": {
 			"containername": {
-				"type": "string",
-				"defaultValue": "gittestcont"
+				"type": "string"
 			},
 			"foldername": {
-				"type": "string",
-				"defaultValue": "test"
+				"type": "string"
 			}
 		},
 		"annotations": [],
