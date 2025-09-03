@@ -15,8 +15,7 @@
 		"DelimitedText1_properties_parameters_containername": {
 			"type": "object",
 			"defaultValue": {
-				"type": "string",
-				"defaultValue": "gittestcont"
+				"type": "string"
 			}
 		},
 		"dev-test-arm-WorkspaceDefaultStorage_properties_typeProperties_url": {
@@ -152,8 +151,7 @@
 				"parameters": {
 					"containername": "[parameters('DelimitedText1_properties_parameters_containername')]",
 					"foldername": {
-						"type": "string",
-						"defaultValue": "test"
+						"type": "string"
 					}
 				},
 				"annotations": [],
@@ -241,8 +239,7 @@
 			"properties": {
 				"parameters": {
 					"accounturl": {
-						"type": "string",
-						"defaultValue": "https://gitteststg.dfs.core.windows.net"
+						"type": "string"
 					}
 				},
 				"annotations": [],

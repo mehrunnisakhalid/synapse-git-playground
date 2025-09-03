@@ -10,8 +10,7 @@
 		},
 		"DelimitedText1_properties_parameters_containername": {
 			"value": {
-				"type": "string",
-				"defaultValue": "gittestcont"
+				"type": "string"
 			}
 		},
 		"dev-test-arm-WorkspaceDefaultStorage_properties_typeProperties_url": {
