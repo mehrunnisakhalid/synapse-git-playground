@@ -67,13 +67,15 @@
                 "typeProperties": {
                     "dataLakeStoreUri": "="
                 }
-            "parameters": {
-					"accounturl": {
-						"type": "string"
-					}
-				}
             }
         },
+		"AzureBlobFS": {
+	      "properties": {
+	        "typeProperties": {
+	          "url": "="
+	        }
+	      }
+	    },
         "AzureKeyVault": {
             "properties": {
                 "typeProperties": {
