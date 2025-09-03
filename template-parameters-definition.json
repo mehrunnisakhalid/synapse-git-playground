@@ -98,9 +98,9 @@
                     "fileName": "="
                 }
 			"parameters": {
-		          "containername": { "type": "=", "defaultValue": "=" },
-		          "foldername":    { "type": "=", "defaultValue": "=" }
-		        }
+				  "containername": { "type": "=", "defaultValue": "=" },
+				  "foldername":    { "type": "=", "defaultValue": "=" }
+				}
             }
         }
     },
