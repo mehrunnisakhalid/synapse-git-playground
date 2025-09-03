@@ -1,0 +1,52 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "stggen2_ls_param",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"accounturl": "https://gitteststg.dfs.core.windows.net"
+			}
+		},
+		"parameters": {
+			"containername": {
+				"type": "string",
+				"defaultValue": "gittestcont"
+			},
+			"foldername": {
+				"type": "string",
+				"defaultValue": "test"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Book1.csv",
+				"folderPath": {
+					"value": "@dataset().foldername",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().containername",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "a",
+				"type": "String"
+			},
+			{
+				"name": "b",
+				"type": "String"
+			}
+		]
+	}
+}
